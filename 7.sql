@@ -112,8 +112,13 @@ INSERT INTO EMP (EMP_EID, EName, Department, Salary, JoiningDate, City) VALUES
 --------EXTRA----------------
 --1.	Find the employee with the highest salary in each department.	
 		SELECT Department,EName,MAX(Salary) FROM Emp
-		GROUP BY Department, EName
+		Where Salary in (Select MAX(Salary) FROM Emp GROUP BY Department)
+		GROUP BY Department,EName
 
+		INSERT INTO EMP (EMP_EID, EName, Department, Salary, JoiningDate, City) VALUES
+(2, 'Rahul2', 'HR', 18000, '1990-01-01', 'Rajkot')
+
+Delete From EMP where EMP_EID =1
 --2.	Calculate the average salary for each city.
 		SELECT City,AVG(Salary)  
 		FROM Emp 

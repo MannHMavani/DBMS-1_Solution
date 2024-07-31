@@ -1,6 +1,6 @@
 --String functions
 --Part-A:
---1.	Find the length of following. (I) NULL    (II) ‘   hello     ’(III)  Blank
+--1.	Find the length of following. (I) NULL    (II) ï¿½   hello     ï¿½(III)  Blank
 		Select LEN(null),Len('   hello     '),len('')
 --2.	Display your name in lower & upper case.
 		Select LOWER('Name'),UPPER('Name')
@@ -8,19 +8,19 @@
 		Select LEFT('Name',3)
 --4.	Display 3rd to 10th character of your name.
 		Select SUBSTRING('Mann Mavani',3,8)
---5.	Write a query to convert ‘abc123efg’ to ‘abcXYZefg’ & ‘abcabcabc’ to ‘ab5ab5ab5’ using REPLACE.
+--5.	Write a query to convert ï¿½abc123efgï¿½ to ï¿½abcXYZefgï¿½ & ï¿½abcabcabcï¿½ to ï¿½ab5ab5ab5ï¿½ using REPLACE.
 		Select REPLACE('abc123efg','123','XYZ'),REPLACE('abcabcabc','c','5')
---6.	Write a query to display ASCII code for ‘a’,’A’,’z’,’Z’, 0, 9.
+--6.	Write a query to display ASCII code for ï¿½aï¿½,ï¿½Aï¿½,ï¿½zï¿½,ï¿½Zï¿½, 0, 9.
 		Select ASCII('a'),ASCII('A'),ASCII('z'),ASCII('Z'),ASCII(0),ASCII(9)
 --7.	Write a query to display character based on number 97, 65,122,90,48,57.
 		Select CHAR(97),CHAR(65),CHAR(122),CHAR(90),CHAR(48),CHAR(57)
---8.	Write a query to remove spaces from left of a given string ‘	hello world		‘.
+--8.	Write a query to remove spaces from left of a given string ï¿½	hello world		ï¿½.
 		Select LTRIM('	hello world		')
---9.	Write a query to remove spaces from right of a given string ‘	hello world		‘.
+--9.	Write a query to remove spaces from right of a given string ï¿½	hello world		ï¿½.
 		Select RTRIM('	hello world		')
---10.	Write a query to display first 4 & Last 5 characters of ‘SQL Server’.
+--10.	Write a query to display first 4 & Last 5 characters of ï¿½SQL Serverï¿½.
 		Select LEFT ('sql server',4), RIGHT ('sql server',7) 
---11.	Write a query to convert a string ‘1234.56’ to number (Use cast and convert function).
+--11.	Write a query to convert a string ï¿½1234.56ï¿½ to number (Use cast and convert function).
 		Select CAST ('1234.56' as float) as 'Cast'
 		Select CONVERT(float,'1234.56') as 'Convert'
 --12.	Write a query to convert a float 10.58 to integer (Use cast and convert function).
@@ -31,7 +31,7 @@
 --14.	Combine two strings using + sign as well as CONCAT ().
 		Select 'Darshan'+'University'
 		Select CONCAT('Darshan ','University')
---15.	Find reverse of “Darshan”.
+--15.	Find reverse of ï¿½Darshanï¿½.
 		Select REVERSE('Darshan')
 --16.	Repeat your name 3 times.
 		Select REPLICATE('HII',3)
@@ -67,4 +67,4 @@
 --8.	Combine the result as <EmpName> receives <commission> per month.
 		SELECT CONCAT(EmpName, ' receives ', Commission, ' per month') FROM Emp_Math
 --9.	Separate once column of Dept Code after value 3.
-		
+SELECT LEFT(DeptCode, 3) AS DeptCode_Part1, SUBSTRING(DeptCode, 4, LEN(DeptCode) - 3) AS DeptCode_Part2 FROM Emp_Math

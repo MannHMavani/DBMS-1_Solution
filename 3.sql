@@ -1,8 +1,9 @@
---Select into Operation
+---------Select into Operation
 --Part-A: 
 --Create table as per following.
 	--1.	Create table Worldcup from cricket with all the columns and data. 
 		SELECT * INTO WorldCup FROM Cricket
+		
 	--2.	Create table T20 from cricket with first two columns with no data.
 		SELECT Name, City INTO T20 FROM Cricket		WHERE 1=2
 	--3.	Create table IPL From Cricket with No Data
