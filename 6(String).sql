@@ -63,8 +63,6 @@
 		WHERE LEN(FirstName) = 5
 --7.	Combile the result as <EmpName> Lives in <City>.
 		SELECT CONCAT(EmpName, ' Lives in ', City) FROM Emp_Math
-
 --8.	Combine the result as <EmpName> receives <commission> per month.
 		SELECT CONCAT(EmpName, ' receives ', Commission, ' per month') FROM Emp_Math
---9.	Separate once column of Dept Code after value 3.
-SELECT LEFT(DeptCode, 3) AS DeptCode_Part1, SUBSTRING(DeptCode, 4, LEN(DeptCode) - 3) AS DeptCode_Part2 FROM Emp_Math
+
